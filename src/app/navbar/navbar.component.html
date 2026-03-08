@@ -1,0 +1,29 @@
+<nav>
+    <a class="Name" routerLink="/">Asian Cuisine</a>
+    <ul>
+        <li> <a routerLink="/" routerLinkActive="aktiuri" [routerLinkActiveOptions]="{exact:true}">Home</a> </li>
+        <li> <a routerLink="/menu" routerLinkActive="aktiuri">Menu</a> </li>
+        <li> <a href="#scroll" routerLinkActive="aktiuri">Contact</a></li>
+        <li> <a routerLink="/cart" routerLinkActive="aktiuri">Cart</a> </li>
+        <li> <a routerLink="/cart"><i class="fa-solid fa-cart-shopping fa-bounce" style="color: #f4f7fa"></i></a></li>
+    </ul>
+    @if (isShown) {
+        <i (click)="hideNav()" class="fa-solid fa-x burgerbar"></i> 
+    }
+    @else {
+        <i (click)="showNav()" class="fa-solid fa-bars burgerbar"></i>
+    }
+    
+</nav>
+
+<div #mobileNav class="mobileNav">
+        <div class="iconCart">
+            <a routerLink="/cart" routerLinkActive="aktiuri">Cart</a>
+            <a routerLink="/cart"><i class="fa-solid fa-cart-shopping fa-bounce" style="color: black"></i></a>
+        </div>
+        <ul>
+            <li> <a routerLink="/" routerLinkActive="aktiuri" [routerLinkActiveOptions]="{exact:true}">Home</a> </li>
+            <li> <a routerLink="/menu" routerLinkActive="aktiuri">Menu</a> </li>
+            <li> <a href="#scroll">Contact</a></li>
+        </ul>
+</div>

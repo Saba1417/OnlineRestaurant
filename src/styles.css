@@ -1,0 +1,18 @@
+/* You can add global styles to this file, and also import other style files */
+html{
+    scroll-behavior: smooth;
+}
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root{
+    --titleFont: "Roboto Slab", serif;
+    --textFont: "Lato", sans-serif;
+    --primaryColor: #1e3a8a; /* Blue */
+    --secondaryColor: #3b82f6; /* Light blue */
+    --textColor: #ffffff; /* White */
+    --backgroundColor: #000000; /* Black, but we'll change */
+}

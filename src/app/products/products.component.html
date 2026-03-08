@@ -1,0 +1,34 @@
+<section class="categories">
+    <ul>
+        <li class="allcategories"><button (click)="showAll()">All</button></li>
+    </ul>
+    <app-categories (transfer)="showProductsByCat($event)"></app-categories>
+</section>
+
+<div class="filterAndcards">
+    <div class="left" *ngIf="!isMenuPage">
+        <app-filter (transferfilter)="getFilteredData($event)"></app-filter>
+    </div>
+    
+    <section class="cards">
+        @for (item of allProducts; track $index) {
+            <div class="card" style="width: 18rem;">
+            <div class="card-img">
+            <img [src]="item.image" class="card-img-top" alt="not found">
+            </div>
+            <div class="card-body">
+              <h5 class="card-title">{{item.name}}</h5>
+            </div>
+            <ul class="list-group list-group-flush">
+              <li>Spiciness: {{item.spiciness}}</li>
+              <li>Vegeterian <i [style.color]="item.vegeterian ? 'green' : 'red'"class="fa-solid fa-{{item.vegeterian ? 'circle-check' : 'x'}}"></i></li>
+              <li>Nuts <i [style.color]="item.nuts ? 'green' : 'red'"class="fa-solid fa-{{item.nuts ? 'circle-check' : 'x'}}"></i></li>
+            </ul>
+            <div class="card-body">
+              <h3 class="card-price">$ {{item.price}}</h3>
+              <button class="cardButton" (click)="addtocart(item)">Add To Cart</button>
+            </div>
+          </div>}
+    </section>
+    
+

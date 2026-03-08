@@ -1,0 +1,59 @@
+.banner{
+    height: 300px;
+    background-image: url("/background.jpg");
+    background-size: cover;
+    background-attachment: fixed;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+.texts{
+    color: white;
+    text-decoration: none;
+    font-size: 30px;
+    font-family: var(--titleFont);
+    z-index: 6;
+}
+
+.banner::after{
+    content: "";
+    width: 100%;
+    height: 100%;
+    background-color: black;
+    position: absolute;
+    opacity: 0.2;
+}
+
+.categories{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 30px;
+    font-family: var(--titleFont);
+    font-size: 30px;
+}
+
+@media screen and (max-width: 768px) {
+    .productSection {
+     flex-direction: column;
+     align-items: center;
+    }
+ .banner .texts {
+     font-size: 20px;
+     margin: 10px;
+ }
+   .aboutText{
+     height: 600px;
+     display: flex;
+     flex-direction: column;
+     justify-content: center;
+     align-items: center;
+     .aboutPhoto img{
+     height: 250px;
+     width: auto;
+     }
+ }
+
+ }

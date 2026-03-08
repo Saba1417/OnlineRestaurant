@@ -1,0 +1,54 @@
+.foodType{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px 30px;
+    margin-bottom: 50px;
+}
+.type{
+    display: flex;
+    gap: 30px;
+    list-style: none;
+}
+button{ 
+    text-decoration: none; 
+    border: none;
+    background-color: none;
+    background-color: transparent;
+    color: rgb(0, 0, 0);
+    font-size: 15px;
+    font-family: var(--textFont);
+    transition: 0.2s;
+}
+button:hover{
+    color: #7C640E;
+    font-size: 20px;
+    font-weight: bold;
+    cursor: pointer;
+}
+button:active{
+    color: #7C640E;
+    }
+
+@media screen and (max-width: 1250px) {
+    .foodType ul li {
+            font-size: 10px;
+        }
+}
+@media screen and (max-width: 998px) {
+    .foodType ul {
+          display: none;
+        }   
+}
+
+@media screen and (max-width: 768px) {
+ 
+ .foodType ul {
+     display: flex;
+     flex-direction: column;
+     flex-wrap: wrap;
+     justify-content: center;
+     align-items: center;
+   }
+ 
+}

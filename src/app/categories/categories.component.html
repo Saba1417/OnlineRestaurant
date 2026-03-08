@@ -1,0 +1,8 @@
+<section class="foodType">
+    <ul class="type">
+        <!-- <li class="allcategories"><button>All</button></li> -->
+        @for (item of categories; track $index) {
+            <li><button (click)="showByCategory(item.id)">{{item.name}}</button></li>
+        }
+    </ul>
+</section>

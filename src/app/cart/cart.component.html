@@ -1,0 +1,40 @@
+<section class="banner">
+    <div class="texts">
+      <h3>My cart</h3>
+    </div>
+  </section>
+
+  <div class="cart">
+    <p>Cart</p>
+  </div>
+
+  <section class="cartItem">
+      <table>
+          <tr class="title">
+              <th colspan="2">Product</th>
+              <th>Quantity</th>
+              <th>Price</th>
+              <th>Total</th>
+              <th></th>
+          </tr>
+          <tbody class="cartItemInfo"></tbody>
+          @for (item of cartlist; track $index) {
+            <tr>
+                <td><img [src]="item.product.image" alt=""></td>
+                <td>{{item.product.name}}</td>
+                <td ><button (click)="plusItem(item)" class="plus">+</button> {{item.quantity}} <button [disabled]="item.quantity == 1" (click)="minusItem(item)" class="minus">-</button></td>
+                <td>{{item.product.price}}</td>
+                <td>{{(item.product.price * item.quantity)}}</td>
+                <td><button (click)="deleteItem(item.product.id, item.product.name)" class="removeBtn">Remove</button></td>
+            </tr>
+          }
+          <!-- <tr>
+            <td class="total" colspan="6">Total Price: {{totalPrice}}</td>
+          </tr> -->
+      </table>
+  </section>
+
+  <div class="Checkout">
+  <button>Proceed To Checkout</button>
+  </div>
+

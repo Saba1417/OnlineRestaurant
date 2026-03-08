@@ -1,0 +1,97 @@
+.productSection{
+    display: flex;
+    gap: 30px;
+    padding-inline: 40px;
+      
+}
+  
+.filterCard {
+    position: relative;
+    width: 230px;
+    background-color: #F3F1EA;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    padding: 20px;
+    margin-left: 20px;
+    font-family: var(--titleFont);
+    font-weight: bold;
+    border-radius: 6px;
+    box-shadow: 0 0 5px 1px grey;
+}
+.fa-filter {
+    position: absolute;
+    right: 30px;
+}
+            
+.inputSpiciness {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+}
+            
+.inputSpiciness input {
+    width: 100%;
+    appearance: none;
+}
+            
+.inputSpiciness input::-webkit-slider-runnable-track {
+    background-color: #2d2d2c;
+    border-radius: 20px;
+    height: 5px;
+    }
+            
+input::-webkit-slider-thumb {
+    box-shadow: 1px 1px 1px #000000;
+    border: 2px solid #000000;
+    height: 20px;
+    width: 5px;
+    border-radius: 5px;
+    background: #000000;
+    cursor: pointer;
+    -webkit-appearance: none;
+    margin-top: -8px;
+}
+            
+.inputnutveg {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+            
+.inputnutveg input {
+    appearance: none;
+    display: flex;
+    align-content: center;
+    justify-content: center;
+    border: 1px solid rgb(58, 58, 58);
+}
+input::before {
+    content: "";
+    width: 20px;
+    height: 20px;
+    transform: scale(0);
+    background-color: rgb(28, 28, 28);
+}
+input:checked::before {
+    transform: scale(1);
+}
+            
+.filterCard button {
+    height: 40px;
+    background-color: #a49999;
+    color: white;
+    font-weight: bold;
+    font-style: normal;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+            
+.filterCard button:hover {
+    background-color: #a49999;
+    box-shadow: 0 0 10px 1px #525252;
+}  
+  

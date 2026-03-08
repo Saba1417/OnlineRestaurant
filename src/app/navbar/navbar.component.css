@@ -1,0 +1,120 @@
+nav{
+    display: flex;
+    justify-content: space-between;
+    height: 80px;
+    width: 100%;
+    align-items: center;
+    background-color: var(--primaryColor);
+    color: var(--textColor);  
+    padding-inline: 80px;
+    position: sticky;
+    top: 0;
+    z-index: 99;
+}
+
+.Name{
+    text-decoration: none; 
+    color: var(--textColor);
+    font-size: 20px;
+    font-family: var(--titleFont);
+    font-weight: 600;
+}
+
+nav ul{
+    display: flex;
+    list-style: none;
+    gap: 40px;
+    align-items: center;
+}
+
+nav ul li a{
+    text-decoration: none; 
+    color: var(--textColor);
+    font-size: 15px;
+    font-family: var(--textFont);
+    transition: 0.2s;
+}
+nav ul li a:hover{
+    color: var(--secondaryColor);
+}
+
+.burgerbar {
+    font-size: 30px;
+    cursor: pointer;
+    display: none;
+}
+
+.mobileNav {
+    position: fixed;
+    z-index: 99;
+    height: 100%;
+    width: 100%;
+    background-color: #F3F1EA;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    transform: translateY(-200%);
+    transition: 0.5s;
+}
+
+.iconCart{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+.iconCart a{
+    text-decoration: none;
+    color: black;
+    font-weight: bold;
+    font-family: var(--textFont);
+}
+.iconCart a:hover{
+    color: #7C640E;
+}
+
+.mobileNav ul{
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    padding: 30px;
+    width: 100%;
+}
+.mobileNav ul li{
+    cursor: pointer;
+    background-color: #cbc9c0 ;
+    width: 100%;
+    padding: 20px;
+    text-align: center;
+}
+.mobileNav ul li a{
+    text-decoration: none;
+    color: black;
+    font-weight: bold;
+    font-family: var(--textFont);
+}
+.mobileNav ul li a:hover{
+    color: #7C640E;
+   }
+
+.aktiuri{
+    font-weight: bold;
+}
+
+
+@media screen and (min-width: 800px) {
+    .mobileNav{
+        display: none;
+    }
+    
+}
+
+@media screen and (max-width: 800px) {
+    nav ul{
+        display: none;
+    }
+    nav i{
+        display: unset;
+    }
+}
